@@ -1,13 +1,13 @@
 <?php
 
 
-class Invoices extends Common {
+class PaymentTerms extends Common {
 
 	private $className;
-	private $name;
-	private $email;
-	private $document;
-	private $address;
+	private $dueDate;
+	private $fine;
+	private $interest;
+	private $discount;
 
 	public function __construct($apiKey) {
 		parent::__construct($apiKey);
@@ -44,81 +44,81 @@ class Invoices extends Common {
 
 
 	/**
-	 * Get the value of address
+	 * Get the value of discount
 	 */ 
-	public function getAddress()
+	public function getDiscount()
 	{
-		return $this->address;
+		return $this->discount;
 	}
 
 	/**
-	 * Set the value of address
+	 * Set the value of discount
 	 *
 	 * @return  self
 	 */ 
-	public function setAddress($address)
+	public function setDiscount($discount)
 	{
-		$this->address = $address;
+		$this->discount = $discount;
 
 		return $this;
 	}
 
 	/**
-	 * Get the value of document
+	 * Get the value of interest
 	 */ 
-	public function getDocument()
+	public function getInterest()
 	{
-		return $this->document;
+		return $this->interest;
 	}
 
 	/**
-	 * Set the value of document
+	 * Set the value of interest
 	 *
 	 * @return  self
 	 */ 
-	public function setDocument($document)
+	public function setInterest($interest)
 	{
-		$this->document = $document;
+		$this->interest = $interest;
 
 		return $this;
 	}
 
 	/**
-	 * Get the value of email
+	 * Get the value of fine
 	 */ 
-	public function getEmail()
+	public function getFine()
 	{
-		return $this->email;
+		return $this->fine;
 	}
 
 	/**
-	 * Set the value of email
+	 * Set the value of fine
 	 *
 	 * @return  self
 	 */ 
-	public function setEmail($email)
+	public function setFine($fine)
 	{
-		$this->email = $email;
+		$this->fine = $fine;
 
 		return $this;
 	}
 
 	/**
-	 * Get the value of name
+	 * Get the value of dueDate
 	 */ 
-	public function getName()
+	public function getDueDate()
 	{
-		return $this->name;
+		return $this->dueDate;
 	}
 
 	/**
-	 * Set the value of name
+	 * Set the value of dueDate
 	 *
 	 * @return  self
 	 */ 
-	public function setName($name)
+	public function setDueDate($dueDate)
 	{
-		$this->name = $name;
+		$this->dueDate = $dueDate;
 
 		return $this;
 	}
