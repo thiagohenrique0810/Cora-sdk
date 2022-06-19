@@ -1,10 +1,11 @@
 <?php
 
 
-class Invoices extends Common {
+class InvoiceDestination extends Common {
 
 	private $className;
-	private $rate;//required
+	private $name;//required
+	private $email;//required
 
 	public function __construct($apiKey) {
 		parent::__construct($apiKey);
@@ -41,21 +42,41 @@ class Invoices extends Common {
 
 
 	/**
-	 * Get the value of rate
+	 * Get the value of email
 	 */ 
-	public function getRate()
+	public function getEmail()
 	{
-		return $this->rate;
+		return $this->email;
 	}
 
 	/**
-	 * Set the value of rate
+	 * Set the value of email
 	 *
 	 * @return  self
 	 */ 
-	public function setRate($rate)
+	public function setEmail($email)
 	{
-		$this->rate = $rate;
+		$this->email = $email;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of name
+	 */ 
+	public function getName()
+	{
+		return $this->name;
+	}
+
+	/**
+	 * Set the value of name
+	 *
+	 * @return  self
+	 */ 
+	public function setName($name)
+	{
+		$this->name = $name;
 
 		return $this;
 	}

@@ -4,10 +4,10 @@
 class Invoices extends Common {
 
 	private $className;
-	private $code;
-	private $custumer;
-	private $services;
-	private $paymentTerms;
+	private $code;//required
+	private $custumer;//required
+	private $services;//required
+	private $paymentTerms;//required
 	private $notifications;
 	private $paymentForms;
 
@@ -17,7 +17,52 @@ class Invoices extends Common {
 		$this->className = get_class($this);
 	}
 
-	public function textToMany($data)
+	public function create($data)
+	{
+		$uriRequest = __METHOD__;
+
+		$request = [
+			'messageData' => [
+				'to' => $data['to'],
+				'text' => $data['text']
+			]
+		];
+		$response = $this->sendPost($request, $this->montaUri($uriRequest));
+
+		return $response;
+	}
+
+	public function update($data)
+	{
+		$uriRequest = __METHOD__;
+
+		$request = [
+			'messageData' => [
+				'to' => $data['to'],
+				'text' => $data['text']
+			]
+		];
+		$response = $this->sendPost($request, $this->montaUri($uriRequest));
+
+		return $response;
+	}
+
+	public function delete($data)
+	{
+		$uriRequest = __METHOD__;
+
+		$request = [
+			'messageData' => [
+				'to' => $data['to'],
+				'text' => $data['text']
+			]
+		];
+		$response = $this->sendPost($request, $this->montaUri($uriRequest));
+
+		return $response;
+	}
+
+	public function show($data)
 	{
 		$uriRequest = __METHOD__;
 

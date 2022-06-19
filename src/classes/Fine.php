@@ -5,6 +5,8 @@ class Invoices extends Common {
 
 	private $className;
 	private $amount;
+	private $date;
+	private $rate;
 
 	public function __construct($apiKey) {
 		parent::__construct($apiKey);
@@ -56,6 +58,46 @@ class Invoices extends Common {
 	public function setAmount($amount)
 	{
 		$this->amount = $amount;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of date
+	 */ 
+	public function getDate()
+	{
+		return $this->date;
+	}
+
+	/**
+	 * Set the value of date
+	 *
+	 * @return  self
+	 */ 
+	public function setDate($date)
+	{
+		$this->date = $date;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of rate
+	 */ 
+	public function getRate()
+	{
+		return $this->rate;
+	}
+
+	/**
+	 * Set the value of rate
+	 *
+	 * @return  self
+	 */ 
+	public function setRate($rate)
+	{
+		$this->rate = $rate;
 
 		return $this;
 	}

@@ -4,7 +4,7 @@
 class PaymentTerms extends Common {
 
 	private $className;
-	private $dueDate;
+	private $dueDate;//required
 	private $fine;
 	private $interest;
 	private $discount;

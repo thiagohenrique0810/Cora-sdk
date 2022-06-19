@@ -1,12 +1,13 @@
 <?php
 
 
-class Invoices extends Common {
+class NotificationsResponse extends Common {
 
 	private $className;
+	private $id;//required
 	private $channels;//required
-	private $destination;//required
-	private $rules;//required
+    private $destination;//required
+    private $schedules;//required
 
 	public function __construct($apiKey) {
 		parent::__construct($apiKey);
@@ -43,41 +44,21 @@ class Invoices extends Common {
 
 
 	/**
-	 * Get the value of rules
+	 * Get the value of id
 	 */ 
-	public function getRules()
+	public function getId()
 	{
-		return $this->rules;
+		return $this->id;
 	}
 
 	/**
-	 * Set the value of rules
+	 * Set the value of id
 	 *
 	 * @return  self
 	 */ 
-	public function setRules($rules)
+	public function setId($id)
 	{
-		$this->rules = $rules;
-
-		return $this;
-	}
-
-	/**
-	 * Get the value of destination
-	 */ 
-	public function getDestination()
-	{
-		return $this->destination;
-	}
-
-	/**
-	 * Set the value of destination
-	 *
-	 * @return  self
-	 */ 
-	public function setDestination($destination)
-	{
-		$this->destination = $destination;
+		$this->id = $id;
 
 		return $this;
 	}
@@ -101,4 +82,44 @@ class Invoices extends Common {
 
 		return $this;
 	}
+
+    /**
+     * Get the value of destination
+     */ 
+    public function getDestination()
+    {
+        return $this->destination;
+    }
+
+    /**
+     * Set the value of destination
+     *
+     * @return  self
+     */ 
+    public function setDestination($destination)
+    {
+        $this->destination = $destination;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of schedules
+     */ 
+    public function getSchedules()
+    {
+        return $this->schedules;
+    }
+
+    /**
+     * Set the value of schedules
+     *
+     * @return  self
+     */ 
+    public function setSchedules($schedules)
+    {
+        $this->schedules = $schedules;
+
+        return $this;
+    }
 }

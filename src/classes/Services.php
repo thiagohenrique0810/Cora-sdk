@@ -4,9 +4,12 @@
 class Services extends Common {
 
 	private $className;
-	private $name;
-	private $description;
-	private $amount;
+	private $name;//required
+	private $description;//required
+	private $amount;//required
+	private $unit;
+	private $quantity;
+	private $total_amount;
 
 	public function __construct($apiKey) {
 		parent::__construct($apiKey);
@@ -98,6 +101,66 @@ class Services extends Common {
 	public function setName($name)
 	{
 		$this->name = $name;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of total_amount
+	 */ 
+	public function getTotal_amount()
+	{
+		return $this->total_amount;
+	}
+
+	/**
+	 * Set the value of total_amount
+	 *
+	 * @return  self
+	 */ 
+	public function setTotal_amount($total_amount)
+	{
+		$this->total_amount = $total_amount;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of quantity
+	 */ 
+	public function getQuantity()
+	{
+		return $this->quantity;
+	}
+
+	/**
+	 * Set the value of quantity
+	 *
+	 * @return  self
+	 */ 
+	public function setQuantity($quantity)
+	{
+		$this->quantity = $quantity;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of unit
+	 */ 
+	public function getUnit()
+	{
+		return $this->unit;
+	}
+
+	/**
+	 * Set the value of unit
+	 *
+	 * @return  self
+	 */ 
+	public function setUnit($unit)
+	{
+		$this->unit = $unit;
 
 		return $this;
 	}

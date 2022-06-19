@@ -1,10 +1,10 @@
 <?php
 
 
-class Invoices extends Common {
+class PaymentOptions extends Common {
 
 	private $className;
-	private $rate;//required
+	private $bank_slip;//required
 
 	public function __construct($apiKey) {
 		parent::__construct($apiKey);
@@ -27,7 +27,6 @@ class Invoices extends Common {
 		return $response;
 	}
 
-
 	/**
 	* metodo para montar a uri
 	*/
@@ -39,23 +38,22 @@ class Invoices extends Common {
 		return $uri;
 	}
 
-
 	/**
-	 * Get the value of rate
+	 * Get the value of bank_slip
 	 */ 
-	public function getRate()
+	public function getBankSlip()
 	{
-		return $this->rate;
+		return $this->bank_slip;
 	}
 
 	/**
-	 * Set the value of rate
+	 * Set the value of bank_slip
 	 *
 	 * @return  self
 	 */ 
-	public function setRate($rate)
+	public function setBankSlip($bank_slip)
 	{
-		$this->rate = $rate;
+		$this->bank_slip = $bank_slip;
 
 		return $this;
 	}

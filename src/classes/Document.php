@@ -4,8 +4,8 @@
 class Invoices extends Common {
 
 	private $className;
-	private $identity;
-	private $type;
+	private $identity;//required
+	private $type;//required
 
 	public function __construct($apiKey) {
 		parent::__construct($apiKey);

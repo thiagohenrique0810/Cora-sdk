@@ -1,10 +1,10 @@
 <?php
 
 
-class Invoices extends Common {
+class Pix extends Common {
 
 	private $className;
-	private $rate;//required
+	private $emv;//required
 
 	public function __construct($apiKey) {
 		parent::__construct($apiKey);
@@ -27,7 +27,6 @@ class Invoices extends Common {
 		return $response;
 	}
 
-
 	/**
 	* metodo para montar a uri
 	*/
@@ -41,21 +40,21 @@ class Invoices extends Common {
 
 
 	/**
-	 * Get the value of rate
+	 * Get the value of emv
 	 */ 
-	public function getRate()
+	public function getEmv()
 	{
-		return $this->rate;
+		return $this->emv;
 	}
 
 	/**
-	 * Set the value of rate
+	 * Set the value of emv
 	 *
 	 * @return  self
 	 */ 
-	public function setRate($rate)
+	public function setEmv($emv)
 	{
-		$this->rate = $rate;
+		$this->emv = $emv;
 
 		return $this;
 	}

@@ -4,13 +4,14 @@
 class Invoices extends Common {
 
 	private $className;
-	private $street;
-	private $number;
-	private $district;
-	private $city;
-	private $state;
-	private $complement;
-	private $zip_code;
+	private $street;//required
+	private $number;//required
+	private $district;//required
+	private $city;//required
+	private $state;//required
+	private $country;//required
+	private $complement;//required
+	private $zip_code;//required
 
 	public function __construct($apiKey) {
 		parent::__construct($apiKey);
@@ -182,6 +183,26 @@ class Invoices extends Common {
 	public function setStreet($street)
 	{
 		$this->street = $street;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of country
+	 */ 
+	public function getCountry()
+	{
+		return $this->country;
+	}
+
+	/**
+	 * Set the value of country
+	 *
+	 * @return  self
+	 */ 
+	public function setCountry($country)
+	{
+		$this->country = $country;
 
 		return $this;
 	}
