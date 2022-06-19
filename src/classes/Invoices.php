@@ -9,6 +9,7 @@ class Invoices extends Common {
 	private $services;
 	private $paymentTerms;
 	private $notifications;
+	private $paymentForms;
 
 	public function __construct($apiKey) {
 		parent::__construct($apiKey);
@@ -139,6 +140,26 @@ class Invoices extends Common {
 	public function setCode($code)
 	{
 		$this->code = $code;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of paymentForms
+	 */ 
+	public function getPaymentForms()
+	{
+		return $this->paymentForms;
+	}
+
+	/**
+	 * Set the value of paymentForms
+	 *
+	 * @return  self
+	 */ 
+	public function setPaymentForms($paymentForms)
+	{
+		$this->paymentForms = $paymentForms;
 
 		return $this;
 	}
